@@ -1,5 +1,7 @@
 package HW1;
-
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         // 1 classes - City and Country
@@ -37,7 +39,54 @@ public class Main {
 //        oldestDoctor.printInfo();
 //        System.out.println("\nLongest-Serving Doctor:");
 //        longestServingDoctor.printInfo();
-        // 3
+        // 4 class Country
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of countries: ");
+        int numCountries = scanner.nextInt();
+        scanner.nextLine();
+
+        List<Country> countries = new ArrayList<>();
+
+        for (int i = 0; i < numCountries; i++) {
+            System.out.println("\nEnter details for country " + (i + 1) + ":");
+            System.out.print("Country Name: ");
+            String name = scanner.nextLine();
+            System.out.print("Population: ");
+            int population = scanner.nextInt();
+            scanner.nextLine();
+            System.out.print("Capital: ");
+            String capital = scanner.nextLine();
+            System.out.print("Area: ");
+            double area = scanner.nextDouble();
+            scanner.nextLine();
+            System.out.print("River Name: ");
+            String riverName = scanner.nextLine();
+            System.out.print("River Length (in km): ");
+            int riverLength = scanner.nextInt();
+            scanner.nextLine();
+
+            countries.add(new Country(name, population, capital, area, riverName, riverLength));
+        }
+
+        List<Country> sortedCountries = new ArrayList<>();
+
+        while (!countries.isEmpty()) {
+            Country maxCountry = countries.get(0);
+            for (Country country : countries) {
+                if (country.getRiverLength() > maxCountry.getRiverLength()) {
+                    maxCountry = country;
+                }
+            }
+            countries.remove(maxCountry);
+            sortedCountries.add(maxCountry);
+        }
+
+
+        System.out.println("\nCountries sorted by river length:");
+        for (int i = sortedCountries.size() - 1; i >= 0; i--) {
+            System.out.println(sortedCountries.get(i));
+        }
 
     }
 }

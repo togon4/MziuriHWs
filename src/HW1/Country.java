@@ -32,4 +32,47 @@ class Country {
 //    public String toString() {
 //        return "Country{name='" + name + "', capital=" + capital + "}";
 //    }
+    private String name;
+    private int population;
+    private String capital;
+    private double area;
+    private River river;
+
+    public Country(String name, int population, String capital, double area, String riverName, int riverLength) {
+        this.name = name;
+        this.population = population;
+        this.capital = capital;
+        this.area = area;
+        this.river = new River(riverName, riverLength);
+    }
+
+    public int getRiverLength() {
+        return river.getLength();
+    }
+
+    @Override
+    public String toString() {
+        return "Country{name='" + name + "', population=" + population +
+                ", capital='" + capital + "', area=" + area +
+                ", river=" + river + "}";
+    }
+
+    class River {
+        private String name;
+        private int length;
+
+        public River(String name, int length) {
+            this.name = name;
+            this.length = length;
+        }
+
+        public int getLength() {
+            return length;
+        }
+
+        @Override
+        public String toString() {
+            return "River{name='" + name + "', length=" + length + " km}";
+        }
+    }
 }
