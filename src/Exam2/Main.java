@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
     public static int[] main(String[] args) {
-        Scanner scanner = new Scanner();
+//        Scanner scanner = new Scanner();
         // 1 - ა
         // 2 - ა
         // 3 - ა
