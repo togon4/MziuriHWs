@@ -113,50 +113,50 @@ public class Main {
 //            System.out.println("Error writing to file: " + e.getMessage());
 //        }
         // 5-6
-        String inputFileName = "C:\\Users\\pc\\Documents\\input.txt";
-
-        int negativeCount = 0;
-        int zeroCount = 0;
-        int positiveCount = 0;
-
-        try (BufferedReader reader = new BufferedReader(new FileReader(inputFileName))) {
-            String line;
-
-            while ((line = reader.readLine()) != null) {
-                try {
-                    int number = Integer.parseInt(line.trim());
-
-                    if (number < 0) {
-                        negativeCount++;
-                    } else if (number == 0) {
-                        zeroCount++;
-                    } else {
-                        positiveCount++;
-                    }
-                } catch (NumberFormatException e) {
-                    System.out.println("Invalid number in file: " + line);
-                }
-            }
-
-            System.out.println("Negative numbers: " + negativeCount);
-            System.out.println("Zeroes: " + zeroCount);
-            System.out.println("Positive numbers: " + positiveCount);
-        } catch (IOException e) {
-            System.out.println("Error reading file: " + e.getMessage());
-        }
-        try {
-            Path filePath = Paths.get(inputFileName);
-            BasicFileAttributes attr = Files.readAttributes(filePath, BasicFileAttributes.class);
-
-            System.out.println("\nFile Information:");
-            System.out.println("File name: " + filePath.getFileName());
-            System.out.println("File size: " + attr.size() + " bytes");
-            System.out.println("Creation time: " + attr.creationTime());
-            System.out.println("Last modified time: " + attr.lastModifiedTime());
-            System.out.println("Is directory: " + attr.isDirectory());
-            System.out.println("Is regular file: " + attr.isRegularFile());
-        } catch (IOException e) {
-            System.out.println("Error retrieving file information: " + e.getMessage());
-        }
+//        String inputFileName = "C:\\Users\\pc\\Documents\\input.txt";
+//
+//        int negativeCount = 0;
+//        int zeroCount = 0;
+//        int positiveCount = 0;
+//
+//        try (BufferedReader reader = new BufferedReader(new FileReader(inputFileName))) {
+//            String line;
+//
+//            while ((line = reader.readLine()) != null) {
+//                try {
+//                    int number = Integer.parseInt(line.trim());
+//
+//                    if (number < 0) {
+//                        negativeCount++;
+//                    } else if (number == 0) {
+//                        zeroCount++;
+//                    } else {
+//                        positiveCount++;
+//                    }
+//                } catch (NumberFormatException e) {
+//                    System.out.println("Invalid number in file: " + line);
+//                }
+//            }
+//
+//            System.out.println("Negative numbers: " + negativeCount);
+//            System.out.println("Zeroes: " + zeroCount);
+//            System.out.println("Positive numbers: " + positiveCount);
+//        } catch (IOException e) {
+//            System.out.println("Error reading file: " + e.getMessage());
+//        }
+//        try {
+//            Path filePath = Paths.get(inputFileName);
+//            BasicFileAttributes attr = Files.readAttributes(filePath, BasicFileAttributes.class);
+//
+//            System.out.println("\nFile Information:");
+//            System.out.println("File name: " + filePath.getFileName());
+//            System.out.println("File size: " + attr.size() + " bytes");
+//            System.out.println("Creation time: " + attr.creationTime());
+//            System.out.println("Last modified time: " + attr.lastModifiedTime());
+//            System.out.println("Is directory: " + attr.isDirectory());
+//            System.out.println("Is regular file: " + attr.isRegularFile());
+//        } catch (IOException e) {
+//            System.out.println("Error retrieving file information: " + e.getMessage());
+//        }
     }
 }

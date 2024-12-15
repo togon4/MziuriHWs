@@ -66,56 +66,44 @@ public class main {
 //                System.out.println("Index " + i + ": " + e.getMessage());
 //            }
 //        }
-        // 3
-//        int[] array = {10, 20, 30, 40, 50};
-//        String fileName = "array_output.txt";
-//
-//        try (FileWriter writer = new FileWriter(fileName)) {
-//            for (int num : array) {
-//                writer.write(num + "\n");
-//            }
-//            System.out.println("Array elements have been written to the file: " + fileName);
-//        } catch (IOException e) {
-//            System.out.println("An IO error occurred: " + e.getMessage());
-//        }
         // 4
-        try {
-            // User input
-            System.out.print("Enter first name: ");
-            String firstName = scanner.nextLine();
-
-            System.out.print("Enter last name: ");
-            String lastName = scanner.nextLine();
-
-            System.out.print("Enter birth year: ");
-            int birthYear = scanner.nextInt();
-
-            System.out.print("Enter birth month: ");
-            int birthMonth = scanner.nextInt();
-
-            System.out.print("Enter birth date: ");
-            int birthDate = scanner.nextInt();
-
-            scanner.nextLine(); // Consume newline
-
-            System.out.print("Enter username: ");
-            String username = scanner.nextLine();
-
-            System.out.print("Enter password: ");
-            String password = scanner.nextLine();
-
-            System.out.print("Enter personal number: ");
-            String personalNumber = scanner.nextLine();
-
-            // Create a User instance
-            User user = new User(firstName, lastName, birthYear, birthMonth, birthDate, username, password, personalNumber);
-            System.out.println("User successfully registered:");
-            System.out.println(user);
-
-        } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
-        } finally {
-            scanner.close();
-        }
+//        try {
+//            // User input
+//            System.out.print("Enter first name: ");
+//            String firstName = scanner.nextLine();
+//
+//            System.out.print("Enter last name: ");
+//            String lastName = scanner.nextLine();
+//
+//            System.out.print("Enter birth year: ");
+//            int birthYear = scanner.nextInt();
+//
+//            System.out.print("Enter birth month: ");
+//            int birthMonth = scanner.nextInt();
+//
+//            System.out.print("Enter birth date: ");
+//            int birthDate = scanner.nextInt();
+//
+//            scanner.nextLine(); // Consume newline
+//
+//            System.out.print("Enter username: ");
+//            String username = scanner.nextLine();
+//
+//            System.out.print("Enter password: ");
+//            String password = scanner.nextLine();
+//
+//            System.out.print("Enter personal number: ");
+//            String personalNumber = scanner.nextLine();
+//
+//            // Create a User instance
+//            User user = new User(firstName, lastName, birthYear, birthMonth, birthDate, username, password, personalNumber);
+//            System.out.println("User successfully registered:");
+//            System.out.println(user);
+//
+//        } catch (Exception e) {
+//            System.out.println("Error: " + e.getMessage());
+//        } finally {
+//            scanner.close();
+//        }
     }
 }
