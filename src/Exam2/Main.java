@@ -4,7 +4,7 @@ package Exam2;
 import java.util.Scanner;
 
 public class Main {
-    public static int[] main(String[] args) {
+    public static void main(String[] args) {
 //        Scanner scanner = new Scanner();
         // 1 - ა
         // 2 - ა
@@ -61,33 +61,33 @@ public class Main {
         // 16
 //        char[] charArray = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd'};
 //        String result = "";
-//        for(int i = 0; i < charArray.length; i++){
+//        for(int i = charArray.length - 1; i < charArray.length; i--){
 //            result += charArray[i];
 //
 //        }
 //        System.out.println(result);
         // 18
-        int[] nums = {2, 7, 11, 15};
-        int target = 9;
-
-        int[] result = findTwoSum(nums, target);
-
-        if (result != null) {
-            System.out.println("Sum is" + target +  "of this two elements from nums array"+ result[0] + ", " + result[1] );
-        } else {
-            System.out.println("No solution found.");
-        }
-        return nums;
-    }
-    public static int[] findTwoSum(int[] nums, int target) {
-        for (int i = 0; i < nums.length - 1; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] + nums[j] == target) {
-                    return new int[] {i, j};
-                }
-            }
-        }
-        return null;
+//        int[] nums = {2, 7, 11, 15};
+//        int target = 9;
+//
+//        int[] result = findTwoSum(nums, target);
+//
+//        if (result != null) {
+//            System.out.println("Sum is" + target +  "of this two elements from nums array"+ result[0] + ", " + result[1] );
+//        } else {
+//            System.out.println("No solution found.");
+//        }
+//        return nums;
+//    }
+//    public static int[] findTwoSum(int[] nums, int target) {
+//        for (int i = 0; i < nums.length - 1; i++) {
+//            for (int j = i + 1; j < nums.length; j++) {
+//                if (nums[i] + nums[j] == target) {
+//                    return new int[] {i, j};
+//                }
+//            }
+//        }
+//        return null;
 
     }
 }
