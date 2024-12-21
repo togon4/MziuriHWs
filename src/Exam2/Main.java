@@ -1,7 +1,6 @@
 package Exam2;
 
 //import static Exam2.Factorial.factorial;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
