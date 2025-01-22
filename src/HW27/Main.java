@@ -29,6 +29,8 @@ public class Main {
 //        }
 //
 //        System.out.println("List after removing even numbers: " + numbers);
+
+
         // 2
 //        int[] array = new int[5];
 //        for (int i = 0; i < array.length; i++) {
@@ -56,17 +58,17 @@ public class Main {
 //        int arrayListMaxIndex = arrayList.indexOf(maxElement);
 //        System.out.println("Index of the maximum element in ArrayList: " + arrayListMaxIndex);
         // 3
-        ArrayList<Student> students = new ArrayList<>();
-
-        students.add(new Student("nika", "nikolaishvili", "12345", 85.4));
-        students.add(new Student("elene", "tabeshadze", "23456", 92.1));
-        students.add(new Student("alex", "mindiashvili", "34567", 78.3));
-        students.add(new Student("gurami", "meliqia", "45678", 89.5));
-        students.add(new Student("giorgi", "wereteli", "56789", 80.7));
-
-        Collections.sort(students, Comparator.comparingDouble(student -> student.averageScore));
-        for (Student student : students) {
-            System.out.println(student);
-        }
+//        ArrayList<Student> students = new ArrayList<>();
+//
+//        students.add(new Student("nika", "nikolaishvili", "12345", 85.4));
+//        students.add(new Student("elene", "tabeshadze", "23456", 92.1));
+//        students.add(new Student("alex", "mindiashvili", "34567", 78.3));
+//        students.add(new Student("gurami", "meliqia", "45678", 89.5));
+//        students.add(new Student("giorgi", "wereteli", "56789", 80.7));
+//
+//        Collections.sort(students, Comparator.comparingDouble(student -> student.averageScore));
+//        for (Student student : students) {
+//            System.out.println(student);
+//        }
     }
 }
