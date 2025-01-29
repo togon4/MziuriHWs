@@ -2,7 +2,7 @@ package PhoneBookSystem;
 import java.io.*;
 
 class PhoneContact implements Serializable {
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1;
     private String firstName;
     private String lastName;
     private String phoneNumber;

@@ -1,8 +1,5 @@
 package PhoneBookSystem;
-import java.io.*;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Phonebook {
     private static final String FILE_NAME = "C:\\Users\\pc\\Desktop\\PhoneBookFile";
