@@ -30,9 +30,7 @@ public class Main {
 //        System.out.print("Enter the number of rows: ");
 //        int numOfRows = scanner.nextInt();
 //        scanner.close();
-//
 //        List<List<Integer>> result = generate(numOfRows);
-//
 //        System.out.println(result);
 
         // Tests
