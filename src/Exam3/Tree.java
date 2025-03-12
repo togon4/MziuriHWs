@@ -2,7 +2,6 @@ package Exam3;
 
 public class Tree {
     Node root;
-
     public Tree(int rootValue){
         this.root = new Node(rootValue);
     }
