@@ -20,7 +20,6 @@ public class Tree {
         }
     }
 
-
     public void printTree() {
         printTree(root, "");
     }
