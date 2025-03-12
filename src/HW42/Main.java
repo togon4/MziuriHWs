@@ -30,24 +30,25 @@ public class Main {
 //        }
 //        System.out.println("Final count: " + counter.getCount());
         // 4
-//        ExecutorService executor = Executors.newFixedThreadPool(NUM_THREADS);
-//        CountDownLatch latch = new CountDownLatch(NUM_THREADS);
-//
-//        long startTime = System.currentTimeMillis();
-//
-//        for (int i = 0; i < NUM_THREADS; i++) {
-//            executor.execute(() -> {
-//                generateSecretCode();
-//                latch.countDown();
-//            });
-//        }
-//        try {
-//            latch.await(3, TimeUnit.SECONDS);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//        executor.shutdown();
-//        long endTime = System.currentTimeMillis();
-//        System.out.println("Execution Time: " + (endTime - startTime) + " ms");
+        ExecutorService executor = Executors.newFixedThreadPool(NUM_THREADS);
+        CountDownLatch latch = new CountDownLatch(NUM_THREADS);
+
+        long startTime = System.currentTimeMillis();
+
+        for (int i = 0; i < NUM_THREADS; i++) {
+            executor.execute(() -> {
+                generateSecretCode();
+                latch.countDown();
+            });
+        }
+        try {
+            latch.await(3, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        executor.shutdown();
+        long endTime = System.currentTimeMillis();
+        System.out.println("Execution Time: " + (endTime - startTime) + " ms");
+        
     }
 }
